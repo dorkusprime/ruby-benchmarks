@@ -1,0 +1,14 @@
+Trying to keep this as simple as possible.  Just run each respective test by entering:
+
+ruby ternary_if_else_case.rb
+
+and the results will be returned.
+
+Latest results:
+
+ternary_if_else_case:
+      user     system      total        real
+ternary  5.480000   0.010000   5.490000 (  5.499066)
+if/else 1  6.270000   0.010000   6.280000 (  6.292527)
+if/else 2  6.090000   0.020000   6.110000 (  6.113204)
+case/switch  8.810000   0.010000   8.820000 (  8.841201)
