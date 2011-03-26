@@ -1,7 +1,5 @@
 require 'benchmark'
 
-# a simple benchmarking tool.
-
 n = 10000000
 a = b = c = d = nil
 
