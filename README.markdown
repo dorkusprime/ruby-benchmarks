@@ -11,10 +11,15 @@ Latest results
 --------------
 
 processor:
+
 `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
+
 ruby version:
+
 `ruby 1.8.7 (2010-01-10 patchlevel 249) [i486-linux]`
+
 operating system:
+
 `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:24:04 UTC 2010 i686 GNU/Linux`
 
 ternary_if_else_case.rb
