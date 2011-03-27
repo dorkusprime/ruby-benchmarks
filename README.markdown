@@ -35,7 +35,7 @@ Check out the source code to see what these tests do.
 
 *Someone recently warned me to be wary of ternary operators in Ruby, so I decided to revisit the ternary/if/else benchmark.  I thought that making the condition more complicated might make a difference . . . but nope.  Maybe there's a difference in memory usage?  That'll probably be a test for another day.*
   
-  
+###
   
     symbols_strings_numbers.rb
                    user     system      total        real
