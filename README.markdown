@@ -26,7 +26,7 @@ Check out the source code to see what these tests do.
     if/elsif/else ===   8.740000   0.000000   8.740000 ( 12.520787)
     if/elsif/else ==    6.450000   0.000000   6.450000 (  9.145887)
 
-*Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator, and I added the == if/elsif/else in there after running the test a few times just for comparison*
+*Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator. I added the == if/elsif/else in there after running the test a few times just for comparison*
 
     symbols_strings_numbers.rb
                    user     system      total        real
