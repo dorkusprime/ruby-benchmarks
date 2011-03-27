@@ -28,13 +28,20 @@ Check out the source code to see what these tests do.
 
 *As I sort of expected, integers were just slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
+                    user       system     total    real
+     .length.times  3.240000   0.000000   3.240000 (  4.614830)
+             .each  2.460000   0.000000   2.460000 (  3.530593)
+    .each_by_index  3.410000   0.000000   3.410000 (  4.810327)
+
+*No major surprises here, other than that each_by_index took even longer than array.length.times*
+
     string_concatenation.rb
          user       system     total    real
       +  3.620000   0.000000   3.620000 (  5.070251)
      +=  4.260000   0.000000   4.260000 (  5.598047)
     #{}  2.990000   0.000000   2.990000 (  4.320495)
 
-*Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  Good to know!  Also, the difference between single-lined + and multiple-lined += was minimal less than I thought it would be.  This lead me to wonder about the classic single vs. double quotes argument.*
+*Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  It makes sense, though, as + actually involves calling the '+' method of the individual string objects.  Also, the difference between single-lined + and multiple-lined += was less than I thought it would be.  This lead me to wonder about the classic single vs. double quotes argument.*
 
                   user        system    total     real
     single quotes 11.760000   0.030000  11.790000 ( 11.812320)
