@@ -3,7 +3,9 @@ require 'benchmark'
 n = 10000000
 
 Benchmark.bmbm do |x|
-  a = b = c = d = nil
+  b = d = nil
+  a = true
+  c = false
    x.report('ternary') { 
      n.times do
        a = b = c = d = nil
@@ -20,14 +22,12 @@ Benchmark.bmbm do |x|
      n.times do
        a = b = c = d = nil
        
-       a = true
        if a
          b = 'true'
        else
          b = 'false'
        end
        
-       c = false
        if c
          d = 'true'
        else
@@ -40,13 +40,12 @@ Benchmark.bmbm do |x|
      n.times do
        a = b = c = d = nil
        
-       a = true
        b = if a
           'true'
         else
           'false'
         end
-        c = false
+
         d = if a
            'true'
          else
@@ -59,7 +58,6 @@ Benchmark.bmbm do |x|
      n.times do
        a = b = c = d = nil
        
-       a = true
        case a
        when true
          b = 'true'
@@ -67,7 +65,6 @@ Benchmark.bmbm do |x|
          b = 'false'
        end
        
-       c = false
        case c
        when true
          b = 'true'
