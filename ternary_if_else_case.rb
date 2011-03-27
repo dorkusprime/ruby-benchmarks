@@ -55,7 +55,7 @@ Benchmark.bmbm do |x|
      end
    }
    a = b = c = d = nil
-   x.report('case/switch') {
+   x.report('case') {
      n.times do
        a = b = c = d = nil
        

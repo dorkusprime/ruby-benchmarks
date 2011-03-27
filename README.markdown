@@ -16,9 +16,17 @@ Check out the source code to see what these tests do.
     ternary       3.500000   0.000000   3.500000 (  4.483160)
     if/else 1     3.490000   0.000000   3.490000 (  4.525578)
     if/else 2     2.890000   0.000000   2.890000 (  4.537393)
-    case/switch   5.220000   0.000000   5.220000 (  7.020520)
+    case          5.220000   0.000000   5.220000 (  7.020520)
 
-*Interesting . . . this means that ternary operator statements are (insignificantly) faster than if/else statements, but both are (significantly) faster than a similar case/switch statement.*
+*Interesting . . . this means that ternary operator statements are (insignificantly) faster than if/else statements, but both are (significantly) faster than a similar case statement.  Of course, 'case' may be better if there are more options, and uses the === operator as opposed to ==.  The next test looks at that.*
+
+    if_else_case.rb
+                            user     system      total        real
+    case                2.300000   0.010000   2.310000 (  3.416037)
+    if/elsif/else ===   8.740000   0.000000   8.740000 ( 12.520787)
+    if/elsif/else ==    6.450000   0.000000   6.450000 (  9.145887)
+
+*Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator, and I added the == if/elsif/else in there after running the test a few times just for comparison*
 
     symbols_strings_numbers.rb
                    user     system      total        real
