@@ -34,7 +34,13 @@ Check out the source code to see what these tests do.
      +=  4.260000   0.000000   4.260000 (  5.598047)
     #{}  2.990000   0.000000   2.990000 (  4.320495)
 
-*Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  Good to know!  Also, the difference between single-lined + and multiple-lined += was minimal less than I thought it would be*
+*Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  Good to know!  Also, the difference between single-lined + and multiple-lined += was minimal less than I thought it would be.  This lead me to wonder about the classic single vs. double quotes argument.*
+
+                  user        system    total     real
+    single quotes 11.760000   0.030000  11.790000 ( 11.812320)
+    double quotes 11.860000   0.030000  11.890000 ( 11.913577)
+
+*I kind of hoped this would be the case.  They're basically the same.*
 
     instance_class_variables.rb
                         user       system     total    real
