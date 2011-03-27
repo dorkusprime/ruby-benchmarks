@@ -28,6 +28,7 @@ Check out the source code to see what these tests do.
 
 *As I sort of expected, integers were just slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
+    array_iteration.rb
                     user       system     total    real
      .length.times  3.240000   0.000000   3.240000 (  4.614830)
              .each  2.460000   0.000000   2.460000 (  3.530593)
@@ -43,11 +44,21 @@ Check out the source code to see what these tests do.
 
 *Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  It makes sense, though, as + actually involves calling the '+' method of the individual string objects.  Also, the difference between single-lined + and multiple-lined += was less than I thought it would be.  This lead me to wonder about the classic single vs. double quotes argument.*
 
+    single_double_quotes.rb
                   user        system    total     real
     single quotes 11.760000   0.030000  11.790000 ( 11.812320)
     double quotes 11.860000   0.030000  11.890000 ( 11.913577)
 
-*I kind of hoped this would be the case.  They're basically the same.*
+*I hoped this would be the case.  They're basically the same.*
+
+    while_until.rb
+             user       system     total    real
+    While 1  1.810000   0.000000   1.810000 (  2.597471)
+    While 2  1.830000   0.000000   1.830000 (  2.528044)
+    Until 1  1.970000   0.000000   1.970000 (  2.539041)
+    Until 2  1.980000   0.000000   1.980000 (  2.590778)
+
+*Negligible differences here, also*
 
     instance_class_variables.rb
                         user       system     total    real
