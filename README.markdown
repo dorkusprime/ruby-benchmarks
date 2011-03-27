@@ -10,12 +10,6 @@ and the results will be returned.  To create a new one, just copy the template.r
 Latest results
 --------------
 
-processor: `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
-
-ruby version: `ruby 1.9.2p180 (2011-02-18 revision 30909) [i686-linux]`
-
-operating system: `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:24:04 UTC 2010 i686 GNU/Linux`
-
     ternary_if_else_case.rb
           user     system      total        real
     ternary  3.500000   0.000000   3.500000 (  4.553587)
@@ -24,6 +18,8 @@ operating system: `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:2
     case/switch  4.960000   0.000000   4.960000 (  7.103045)
 
 Interesting . . . this means that if/else statements are (insignificantly) faster than ternary operators, but both are (slightly significantly) faster than a similar case/switch statement.
+
+
 
 
     symbols_strings_numbers.rb
@@ -35,9 +31,20 @@ Interesting . . . this means that if/else statements are (insignificantly) faste
 As I sort of expected, integers were just a slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).
 
 
+
+
     instance_class_variables.rb
           user     system      total        real
     Instance Variables  0.880000   0.000000   0.880000 (  1.363280)
     Class Variables  1.140000   0.000000   1.140000 (  1.608564)
 
 Basically a useless test.  I was just curious.
+
+Test Platform
+-------------
+
+processor: `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
+
+ruby version: `ruby 1.9.2p180 (2011-02-18 revision 30909) [i686-linux]`
+
+operating system: `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:24:04 UTC 2010 i686 GNU/Linux`
