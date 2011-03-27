@@ -37,7 +37,7 @@ Benchmark.bm do |x|
      end
    }
    
-   x.report('Class Variables') { 
+   x.report('   Class Variables') { 
      n.times do
        testClassTwo = TestClassTwo.new # initializing, just to keep the tests
        testClassTwo.class::read

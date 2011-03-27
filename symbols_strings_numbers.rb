@@ -3,7 +3,7 @@ require 'benchmark'
 n = 500000
 a = b = c = d = e = f = nil
 Benchmark.bm do |x|
-   x.report('Symbols') { 
+   x.report(' Symbols') { 
      n.times do
        a = b = c = d = e = f = nil
        
@@ -32,7 +32,7 @@ Benchmark.bm do |x|
        f = "#{c} #{d} #{e}"
      end
    }
-   x.report('Strings') { 
+   x.report(' Strings') { 
      n.times do
        a = b = c = d = e = f = nil
        
