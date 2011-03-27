@@ -13,12 +13,12 @@ Check out the source code to see what these tests do.
 
     ternary_if_else_case.rb
                       user     system      total        real
-    ternary       3.340000   0.000000   3.340000 (  4.829742)
-    if/else 1     3.540000   0.000000   3.540000 (  4.983159)
-    if/else 2     3.280000   0.000000   3.280000 (  4.901104)
-    case/switch   5.190000   0.000000   5.190000 (  7.523282)
+    ternary       3.500000   0.000000   3.500000 (  4.483160)
+    if/else 1     3.490000   0.000000   3.490000 (  4.525578)
+    if/else 2     2.890000   0.000000   2.890000 (  4.537393)
+    case/switch   5.220000   0.000000   5.220000 (  7.020520)
 
-*Interesting . . . this means that if/else statements are (insignificantly) faster than ternary operators, but both are (significantly) faster than a similar case/switch statement.*
+*Interesting . . . this means that ternary operator statements are (insignificantly) faster than if/else statements, but both are (significantly) faster than a similar case/switch statement.*
 
     symbols_strings_numbers.rb
                    user     system      total        real
