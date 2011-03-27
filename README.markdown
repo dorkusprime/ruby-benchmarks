@@ -30,8 +30,8 @@ Check out the source code to see what these tests do.
 
     instance_class_variables.rb
           user     system      total        real
-    Instance Variables  0.880000   0.000000   0.880000 (  1.363280)
-    Class Variables  1.140000   0.000000   1.140000 (  1.608564)
+    Class Variables  6.310000   0.000000   6.310000 (  9.219792)
+    Instance Variables  6.660000   0.000000   6.660000 (  8.636813)
 
 *Basically a useless test.  I was just curious.*
 

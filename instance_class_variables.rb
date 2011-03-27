@@ -27,16 +27,20 @@ Benchmark.bm do |x|
       return @@a.to_s + @@b.to_s + @@c.to_s + @@d.to_s
     end
   end
+  x.report('Class Variables') { 
+    n.times do
+      testClassTwo = TestClassTwo.new
+      testClassTwo.read
+    end
+  }
+  
    x.report('Instance Variables') { 
      n.times do
        testClassOne = TestClassOne.new
+       testClassOne.read
      end
    }
    
-   x.report('Class Variables') { 
-     n.times do
-       testClassTwo = TestClassTwo.new
-     end
-   }
+
 end
 
