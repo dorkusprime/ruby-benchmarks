@@ -17,10 +17,7 @@ Latest results
     if/else 2  3.250000   0.000000   3.250000 (  4.582760)
     case/switch  4.960000   0.000000   4.960000 (  7.103045)
 
-Interesting . . . this means that if/else statements are (insignificantly) faster than ternary operators, but both are (slightly significantly) faster than a similar case/switch statement.
-
-
-
+*Interesting . . . this means that if/else statements are (insignificantly) faster than ternary operators, but both are (slightly significantly) faster than a similar case/switch statement.*
 
     symbols_strings_numbers.rb
           user     system      total        real
@@ -28,17 +25,14 @@ Interesting . . . this means that if/else statements are (insignificantly) faste
     Strings  4.220000   0.010000   4.230000 (  5.896408)
     Integers  2.540000   0.000000   2.540000 (  3.479535)
 
-As I sort of expected, integers were just a slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).
-
-
-
+*As I sort of expected, integers were just a slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
     instance_class_variables.rb
           user     system      total        real
     Instance Variables  0.880000   0.000000   0.880000 (  1.363280)
     Class Variables  1.140000   0.000000   1.140000 (  1.608564)
 
-Basically a useless test.  I was just curious.
+*Basically a useless test.  I was just curious.*
 
 Test Platform
 -------------
