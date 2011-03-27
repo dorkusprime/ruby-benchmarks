@@ -2,7 +2,8 @@ require 'benchmark'
 
 n = 1000000
 a = 0
-Benchmark.bm do |x|
+Benchmark.bmbm do |x|
+  a = 0
   x.report('While 1') { 
     n.times do
       a = 0
@@ -11,6 +12,8 @@ Benchmark.bm do |x|
       end
     end
   }
+  
+  a = 0
   x.report('While 2') {
     n.times do
       a = 0
@@ -19,6 +22,8 @@ Benchmark.bm do |x|
       end
     end
   }
+
+  a = 0
   x.report('Until 1') { 
    n.times do
     a = 0
@@ -27,6 +32,8 @@ Benchmark.bm do |x|
       end
     end
   }
+
+  a = 0
   x.report('Until 2') { 
    n.times do
     a = 0

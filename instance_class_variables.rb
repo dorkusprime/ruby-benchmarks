@@ -3,7 +3,7 @@ require 'benchmark'
 n = 1000000
 # not a very useful test, since these variables have quite different uses . . . but I was curious, so why not?
 
-Benchmark.bm do |x|
+Benchmark.bmbm do |x|
   class TestClassOne
     def initialize
       @a = 5280
@@ -32,13 +32,15 @@ Benchmark.bm do |x|
   
    x.report('Instance Variables') { 
      n.times do
+       testClassOne = nil
        testClassOne = TestClassOne.new
        testClassOne.read
      end
    }
    
-   x.report('   Class Variables') { 
+   x.report('Class Variables') { 
      n.times do
+       testClassTwo = nil
        testClassTwo = TestClassTwo.new # initializing, just to keep the tests
        testClassTwo.class::read
      end

@@ -1,10 +1,10 @@
 require 'benchmark'
 
 n = 1000000
-Benchmark.bm do |x|
+Benchmark.bmbm do |x|
   array = ['this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array', 'this', 'is', 'a', 'long', 'array']
   a = i = nil
-  x.report(' .length.times') { 
+  x.report('.length.times') { 
    n.times do
      a = i = nil
      array.length.times do |i|
@@ -12,7 +12,8 @@ Benchmark.bm do |x|
      end   
    end
   }
-  x.report('         .each') { 
+  a = i = nil
+  x.report('.each') { 
    n.times do
      a = nil
      array.each do |i|
@@ -21,6 +22,7 @@ Benchmark.bm do |x|
    end
   }
   
+  a = i = nil
   x.report('.each_by_index') { 
    n.times do
      a = i = nil

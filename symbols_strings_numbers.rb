@@ -2,8 +2,9 @@ require 'benchmark'
 
 n = 500000
 a = b = c = d = e = f = nil
-Benchmark.bm do |x|
-   x.report(' Symbols') { 
+Benchmark.bmbm do |x|
+  a = b = c = d = e = f = nil
+   x.report('Symbols') { 
      n.times do
        a = b = c = d = e = f = nil
        
@@ -32,7 +33,8 @@ Benchmark.bm do |x|
        f = "#{c} #{d} #{e}"
      end
    }
-   x.report(' Strings') { 
+   a = b = c = d = e = f = nil
+   x.report('Strings') { 
      n.times do
        a = b = c = d = e = f = nil
        
@@ -61,6 +63,7 @@ Benchmark.bm do |x|
        f = "#{c} #{d} #{e}"
      end
    }
+   a = b = c = d = e = f = nil
    x.report('Integers') { 
      n.times do
        a = b = c = d = e = f = nil

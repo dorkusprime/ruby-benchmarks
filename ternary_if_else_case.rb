@@ -1,10 +1,10 @@
 require 'benchmark'
 
 n = 10000000
-a = b = c = d = nil
 
-Benchmark.bm do |x|
-   x.report('    ternary') { 
+Benchmark.bmbm do |x|
+  a = b = c = d = nil
+   x.report('ternary') { 
      n.times do
        a = b = c = d = nil
        
@@ -15,7 +15,8 @@ Benchmark.bm do |x|
        d = c ? 'true' : 'false'
      end
    }
-   x.report('  if/else 1') {
+   a = b = c = d = nil
+   x.report('if/else 1') {
      n.times do
        a = b = c = d = nil
        
@@ -34,7 +35,8 @@ Benchmark.bm do |x|
        end
      end
    }
-   x.report('  if/else 2') {
+   a = b = c = d = nil
+   x.report('if/else 2') {
      n.times do
        a = b = c = d = nil
        
@@ -52,7 +54,7 @@ Benchmark.bm do |x|
          end
      end
    }
-   
+   a = b = c = d = nil
    x.report('case/switch') {
      n.times do
        a = b = c = d = nil
