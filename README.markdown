@@ -28,6 +28,14 @@ Check out the source code to see what these tests do.
 
 *As I sort of expected, integers were just slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
+    string_concatenation.rb
+          user     system      total        real
+    +    3.620000   0.000000   3.620000 (  5.070251)
+    +=   4.260000   0.000000   4.260000 (  5.598047)
+    #{}  2.990000   0.000000   2.990000 (  4.320495)
+
+*Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  Good to know!  Also, the difference between single-lined + and multiple-lined += was minimal less than I thought it would be*
+
     instance_class_variables.rb
           user     system      total        real
     Instance Variables  6.120000   0.000000   6.120000 (  8.681047)
