@@ -1,14 +1,22 @@
-Ruby Benchmarks
-===============
-
 Trying to keep this as simple as possible to keep the background noise down.  Just run each respective test by entering:
 
 `ruby ternary_if_else_case.rb`
 
-and the results will be returned.  To create a new one, just copy the template.rb file and change it.
+and the results will be returned.  To create a new one, just copy template.rb to a new file and change it.
+
+Test Platform
+=============
+The platform used for the above test results.
+
+processor: `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
+
+ruby version: `ruby 1.9.2p180 (2011-02-18 revision 30909) [i686-linux]`
+
+operating system: `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:24:04 UTC 2010 i686 GNU/Linux`
+
 
 Latest results
---------------
+==============
 Check out the source code to see what these tests do.
 
 #ternary_if_else_case.rb
@@ -81,13 +89,3 @@ Check out the source code to see what these tests do.
     Class Variables      6.000000   0.010000   6.010000 (  8.439407)
 
 *Basically a useless test.  I was just curious.*
-
-Test Platform
--------------
-The platform used for the above test results.
-
-processor: `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
-
-ruby version: `ruby 1.9.2p180 (2011-02-18 revision 30909) [i686-linux]`
-
-operating system: `Linux ubuntu 2.6.32-24-generic #42-Ubuntu SMP Fri Aug 20 14:24:04 UTC 2010 i686 GNU/Linux`
