@@ -20,6 +20,8 @@ Check out the source code to see what these tests do.
 
 *Interesting . . . this means that ternary operator statements are (insignificantly) faster than if/else statements, but both are (significantly) faster than a similar case statement.  Of course, 'case' may be better if there are more options, and uses the === operator as opposed to ==.  The next test looks at that.*
 
+---
+
     if_else_case.rb
                             user     system      total        real
     case                2.300000   0.010000   2.310000 (  3.416037)
@@ -28,6 +30,8 @@ Check out the source code to see what these tests do.
 
 *Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator. I added the == if/elsif/else in there after running the test a few times just for comparison.*
 
+---
+
     ternary_if_else_revisited.rb
                   user     system      total        real
     ternary   1.680000   0.000000   1.680000 (  2.493004)
@@ -35,7 +39,7 @@ Check out the source code to see what these tests do.
 
 *Someone recently warned me to be wary of ternary operators in Ruby, so I decided to revisit the ternary/if/else benchmark.  I thought that making the condition more complicated might make a difference . . . but nope.  Maybe there's a difference in memory usage?  That'll probably be a test for another day.*
   
-#
+---
   
     symbols_strings_numbers.rb
                    user     system      total        real
@@ -45,6 +49,8 @@ Check out the source code to see what these tests do.
 
 *As I sort of expected, integers are about the same speed as symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
+---
+
     array_iteration.rb
                          user     system      total        real
     .length.times    3.190000   0.000000   3.190000 (  4.543664)
@@ -52,6 +58,8 @@ Check out the source code to see what these tests do.
     .each_by_index   3.140000   0.000000   3.140000 (  4.476254)
 
 *No major surprises here, other than that each_by_index took even longer than array.length.times*
+
+---
 
     string_concatenation.rb
               user     system      total        real
@@ -61,12 +69,16 @@ Check out the source code to see what these tests do.
 
 *Well this one's a bit of a surprise.  Concatenating inside double-quotes with the is the fastest.  It makes sense, though, as + actually involves calling the '+' method of the individual string objects.  Also, the difference between single-lined + and multiple-lined += was less than I thought it would be.  This lead me to wonder about the classic single vs. double quotes argument.*
 
+---
+
     single_double_quotes.rb
                         user     system      total        real
     single quotes   5.120000   0.000000   5.120000 (  6.883439)
     double quotes   5.130000   0.010000   5.140000 (  6.886382)
 
 *I hoped this would be the case.  They're basically the same.*
+
+---
 
     while_until.rb
                   user     system      total        real
@@ -76,6 +88,8 @@ Check out the source code to see what these tests do.
     Until 2   1.470000   0.000000   1.470000 (  2.493376)
 
 *Negligible differences here, also*
+
+---
 
     instance_class_variables.rb
                              user     system      total        real
