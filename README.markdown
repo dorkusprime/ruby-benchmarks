@@ -9,6 +9,7 @@ and the results will be returned.  To create a new one, just copy the template.r
 
 Latest results
 --------------
+Check out the source code to see what these tests do.
 
     ternary_if_else_case.rb
           user     system      total        real
@@ -25,7 +26,7 @@ Latest results
     Strings  4.220000   0.010000   4.230000 (  5.896408)
     Integers  2.540000   0.000000   2.540000 (  3.479535)
 
-*As I sort of expected, integers were just a slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
+*As I sort of expected, integers were just slightly faster than symbols, and strings are the slowest.  Of course, the times will be directly affected by the complexity of the hashes used and of the operations performed on them, so these times here should be taken lightly.  My guess, though, is that further complexity will only serve to make the differences more pronounced (especially in the 'strings' case).*
 
     instance_class_variables.rb
           user     system      total        real
@@ -36,6 +37,7 @@ Latest results
 
 Test Platform
 -------------
+The platform used for the above test results.
 
 processor: `GenuineIntel Intel(R) Core(TM) i7 CPU M 620  @ 2.67GHz`
 
