@@ -17,22 +17,18 @@ Benchmark.bm do |x|
   end
 
   class TestClassTwo
+    @@a = 5280
+    @@b = 'chunky bacon'
+    @@c = {:a => 1, :b => 2}
+    @@d = [1,2,3,4]
     def initialize
-      @@a = 5280
-      @@b = 'chunky bacon'
-      @@c = {:a => 1, :b => 2}
-      @@d = [1,2,3,4]
+
     end
-    def read
+    def self.read
       return @@a.to_s + @@b.to_s + @@c.to_s + @@d.to_s
     end
   end
-  x.report('Class Variables') { 
-    n.times do
-      testClassTwo = TestClassTwo.new
-      testClassTwo.read
-    end
-  }
+
   
    x.report('Instance Variables') { 
      n.times do
@@ -41,6 +37,12 @@ Benchmark.bm do |x|
      end
    }
    
+   x.report('Class Variables') { 
+     n.times do
+       testClassTwo = TestClassTwo.new # initializing, just to keep the tests
+       testClassTwo.class::read
+     end
+   }
 
 end
 
