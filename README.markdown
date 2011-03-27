@@ -26,7 +26,14 @@ Check out the source code to see what these tests do.
     if/elsif/else ===   8.740000   0.000000   8.740000 ( 12.520787)
     if/elsif/else ==    6.450000   0.000000   6.450000 (  9.145887)
 
-*Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator. I added the == if/elsif/else in there after running the test a few times just for comparison*
+*Wow, big difference here.  Case was clearly faster than if/elsif/else using the === operator. I added the == if/elsif/else in there after running the test a few times just for comparison.*
+
+    ternary_if_else_revisited.rb
+                  user     system      total        real
+    ternary   1.680000   0.000000   1.680000 (  2.493004)
+    if/else   1.660000   0.000000   1.660000 (  2.623511)
+
+*Someone recently warned me to be wary of ternary operators in Ruby, so I decided to revisit the ternary/if/else benchmark.  I thought that making the condition more complicated might make a difference . . . but nope.  Maybe there's a difference in memory usage?  That'll probably be a test for another day.*
 
     symbols_strings_numbers.rb
                    user     system      total        real
